@@ -16,7 +16,7 @@ import (
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	secret := os.Getenv("CHANNEL_SECRET")
-	if !verifySignature(secret, request.Headers["X-Line-Signature"], []byte(request.Body)) {
+	if !verifySignature(secret, request.Headers["x-line-signature"], []byte(request.Body)) {
 		return events.APIGatewayProxyResponse{}, errors.New("invalid: wrong signature")
 	}
 
