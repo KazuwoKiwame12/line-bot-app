@@ -1,2 +1,2 @@
 # line-bot-app
-line-botとawsでおうむ返しを行うアプリ
+this repository is for studying how to use line messagin api.
